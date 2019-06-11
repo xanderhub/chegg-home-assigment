@@ -52,7 +52,8 @@ Example of GET request logs:
 
 ![Logs2](https://user-images.githubusercontent.com/33380175/59260788-eb02ba00-8c44-11e9-83df-b4d59f66a8ca.PNG)
 
-
+While running the app you can log in to H2 Console and see the data loaded (no need for a password):
+[http://localhost:8080/h2-console](http://localhost:8080/h2-console)
 
 ### Data Loaders
 In this project there are three implpementation classes for extracting and loading questions data (each per source):<br />
