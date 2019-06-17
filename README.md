@@ -10,6 +10,11 @@ The data (students questions) is stored in `questions` table as following:
 
 ![DataFromH2](https://user-images.githubusercontent.com/33380175/59254944-d40a9a80-8c39-11e9-86c4-499e7660c622.PNG)
 
+<br /> 
+<br /> 
+
+## Server
+
 ### Technologies / libraries  used in this project:
 * Java 8
 * Spring Boot + Spring Data
@@ -18,9 +23,12 @@ The data (students questions) is stored in `questions` table as following:
 * OpenCSV
 * Google Cloud Vision API
 
-### Running the app
-You can try Q-Fetcher by running it locally (just run it as Spring Boot app or execute main() method <br /> 
-in `AssignmentApplication` class directly). Here are some examples of HTTP GET requests that you can run:
+### Running the server
+To run the server, cd into the `chegg-home-assigment` folder and run:<br /> 
+```
+./mvnw spring-boot:run
+```
+Here are some examples of HTTP GET requests that you can run:<br /> 
 
 `localhost:8080/api/questions?page=0&size=10`     -     retrieves first 10 questions (all sources)<br />
 `localhost:8080/api/questions?source=CSV&page=0&size=3`     -     retrieves first 3 questions extracted from CSV file only<br />
@@ -108,6 +116,29 @@ Here is how the table looks in H2 database after index definition:<br />
 `Question` entity has its DTO (data transfer object) representation defioned in `QuestionDTO` class.
 This just wraps the `Question` class and represents it according to API defined in [assigment task](https://bitbucket.org/cheggil/fullstack-home-assignment/src/master/)
 
+<br /> 
+<br /> 
+<br /> 
 
+## Client
+
+The following screenshot describes the client side app.<br /> 
+Questions organized in table with __source__ and __question__ columns. <br /> 
+There is an option to filter questions by source using dropdown list.
+
+![Client1](https://user-images.githubusercontent.com/33380175/59617318-c9b33980-912e-11e9-972f-9669b00bf1d4.PNG)
+
+The __Next__ button gets next result page with questions. <br /> 
+It's disabled if there are no additional questions that can be presented.<br />  
+
+### Technologies / libraries  used in this project:
+* React
+* Bootstrap
+* JavaScript ES6
+
+### Running the client
+To run the client app please insure you have Node 8.10.0 or later on your machine.<br /> 
+cd into `client/q-fetcher-app` and run `npm start` or `yarn start`<br /> 
+Open `http://localhost:3000` to view the app running in the browser.
 
 
